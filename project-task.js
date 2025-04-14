@@ -18,13 +18,7 @@ This activity helps build a dynamic "To-Do List Filter" based on different crite
 // 🚀 Starting Point: To-Do List Array
 // ============================================
 
-const todos = [
-    { task: "Wash the dishes", completed: false, priority: 3 },
-    { task: "Write a blog post", completed: true, priority: 1 },
-    { task: "Buy groceries", completed: false, priority: 2 },
-    { task: "Study JavaScript", completed: true, priority: 1 },
-    { task: "Walk the dog", completed: false, priority: 2 },
-  ];
+
   
   // ============================================
   // 🔍 Tasks
@@ -78,4 +72,35 @@ const todos = [
   // console.log("Sorted by Priority:", ...);
   // console.log("All Tasks Completed:", ...);
   // console.log("Sorted Incomplete Tasks:", ...);
+
+  const toDos = [
+    { task: "Wash the dishes", completed: false, priority: 3 },
+    { task: "Write a blog post", completed: true, priority: 1 },
+    { task: "Buy groceries", completed: false, priority: 2 },
+    { task: "Study JavaScript", completed: true, priority: 1 },
+    { task: "Walk the dog", completed: false, priority: 2 },
+  ];
+
+  // Task 1: Filter Incomplete Tasks //
+    let incompleteTasks = toDos.filter((toDo) => toDo.completed === false);
+    console.log("Incomplete Tasks: ", incompleteTasks);
+
+  // Task 2: Sort Tasks by Priority //
+    toDos.sort((a,b) => a.priority - b.priority);
+    console.log("Sorted by Priority: ", toDos);
+
+  // Task 3: Mark All Tasks as Completed //
+    let finished = toDos.map((toDos) => toDos.completed = true);
+    console.log("All Tasks Completed: ", "completed: ", finished);
+
+  // Task 4:  Combine Filters // 
+  
+  let tasks = toDos.filter((toDo) => toDo.completed === false);
+  
+  tasks.sort((a,b) => a.priority - b.priority);
+  
+  console.log("Sorted Incomplete Tasks: ", tasks);
+
+
+
   
