@@ -90,17 +90,23 @@ This activity helps build a dynamic "To-Do List Filter" based on different crite
     console.log("Sorted by Priority: ", toDos);
 
   // Task 3: Mark All Tasks as Completed //
-    let finished = toDos.map((toDos) => toDos.completed = true);
-    console.log("All Tasks Completed: ", "completed: ", finished);
+  dupeToDos = structuredClone(toDos);  
+  console.log(dupeToDos);
+
+  let finished = dupeToDos.map((toDo) => {
+      toDo.completed = true;
+      return toDo;
+    }
+  )
+  console.log("All Tasks Completed: ", finished);
 
   // Task 4:  Combine Filters // 
   
   let tasks = toDos.filter((toDo) => toDo.completed === false);
   
   tasks.sort((a,b) => a.priority - b.priority);
-  
-  console.log("Sorted Incomplete Tasks: ", tasks);
 
+  console.log("Sorted Incomplete Tasks: ", tasks);
 
 
   
