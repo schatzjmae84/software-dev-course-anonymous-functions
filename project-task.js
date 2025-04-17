@@ -102,9 +102,7 @@ This activity helps build a dynamic "To-Do List Filter" based on different crite
 
   // Task 4:  Combine Filters // 
   
-  let tasks = toDos.filter((toDo) => toDo.completed === false);
-  
-  tasks.sort((a,b) => a.priority - b.priority);
+  let tasks = toDos.filter((toDo) => toDo.completed === false).sort((a,b) => a.priority - b.priority);
 
   console.log("Sorted Incomplete Tasks: ", tasks);
 
